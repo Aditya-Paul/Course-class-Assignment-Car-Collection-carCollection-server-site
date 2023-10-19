@@ -9,9 +9,9 @@ const handledelete =id =>{
     })
     .then(res=>res.user)
     .then(data=>{
-        console.log(data.deletecount)
-         const remaining = data.filter(item=>item._id !==id)
-         setData(remaining)
+        // console.log(data.deletecount)
+        //  const remaining = data.filter(item=>item._id !==id)
+        //  setData(remaining)
     })
 }
     return (
