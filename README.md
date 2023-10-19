@@ -1,8 +1,12 @@
-# React + Vite
+# 5 Features of the project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
++ Use firebase authentication on email password & google
 
-Currently, two official plugins are available:
++ Use private routes it`s seems like there are somebody who will access those parts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
++ Use tailwind + daisyUI for webpage reasponsive and beautification
+
++ Use Mongodb database by using this we can easily creat my database as a i want to creat , and easily access the 
+
++ We use form like addbrand, addproducts bu using we can easily put data to the database
+
