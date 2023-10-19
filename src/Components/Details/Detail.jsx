@@ -1,13 +1,36 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Detail = () => {
     const getdata = useLoaderData()
     const { name, photo, price, description } = getdata
-    const cart = {name, photo, price, description}
-    const handleadd = () =>{
-        
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    const handleadd = () => {
+        const cart = { name, photo, price, description }
+
+        fetch('http://localhost:5000/carts', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(cart),
+        })
+            .then(res => {res.user,
+                Swal.fire({
+                    title: 'good job',
+                    text: 'enter to database',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                }),
+                navigate(location.state? location.state:'/')
+            })
+            .then(data => {
+                console.log(data)
+            })
     }
-    // console.log(name)
+
     return (
         <div className="h-screen flex justify-center items-center  mx-20 ">
             <div className="border-2 grid grid-cols-1 md:grid-cols-2 bg-slate-300 ">
