@@ -14,8 +14,8 @@ const AddProduct = () => {
         const price = form.price.value
         const rateing = form.rateing.value
         const description = form.description.value
-        const cartypes = form.cartypes.value
-        const item = {name, brandname, photo, price, rateing, description, cartypes}
+        const types = form.cartypes.value
+        const item = {name, brandname, photo, price, rateing, description, types}
         console.log(item,'get item')
         fetch('http://localhost:5000/products',{
             method:"POST",
@@ -100,8 +100,7 @@ const AddProduct = () => {
                         <span className="label-text text-pink-300">Type of Cars</span>
                     </div>
                     <select id="cars" name="cartypes" placeholder="type of Cars " className="bordered border-2 rounded-lg h-12">
-                        <option value="Classic">Classic</option>
-                        <option value="Sports">Sports</option>
+                        <option value="Classic">Car</option>
                     </select>
                 </div>
 

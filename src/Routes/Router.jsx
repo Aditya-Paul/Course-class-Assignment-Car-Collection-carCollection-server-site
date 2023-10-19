@@ -10,6 +10,7 @@ import AddBrand from "../Components/Forms/AddBrand";
 import Mycart from "../Components/My_cart/Mycart";
 import PrivateRoute from "./PrivateRoute";
 import Brandsitem from "../Components/BrandsItem/Brandsitem";
+import Detail from "../Components/Details/Detail";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
                 path: "/:brandname",
                 element: <Brandsitem></Brandsitem>,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brandname}`)
+            },
+            {
+                path: "/details/:id",
+                element: <Detail></Detail>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
             },
             {
                 path: "/Updateproduct",
