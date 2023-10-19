@@ -38,7 +38,7 @@ const AddBrand = () => {
                         <option value="Mercedes">Mercedes</option>
                         <option value="Audi">Audi</option>
                         <option value="Porsche">Porsche</option>
-                        <option value="Conference Planning">Ferrari</option>
+                        <option value="Ferrari">Ferrari</option>
                     </select>
                 </div>
 

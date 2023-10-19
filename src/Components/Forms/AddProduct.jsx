@@ -15,8 +15,17 @@ const AddProduct = () => {
         const rateing = form.rateing.value
         const description = form.description.value
         const cartypes = form.cartypes.value
-
-        console.log(name, brandname, photo, price, rateing, description, cartypes)
+        const item = {name, brandname, photo, price, rateing, description, cartypes}
+        console.log(item,'get item')
+        fetch('http://localhost:5000/products',{
+            method:"POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(item),
+        })
+        .then(res=>res.json())
+        .then(data=>console.log(data))
     }
     return (
         <>
@@ -43,7 +52,7 @@ const AddProduct = () => {
                         <option value="Mercedes">Mercedes</option>
                         <option value="Audi">Audi</option>
                         <option value="Porsche">Porsche</option>
-                        <option value="Conference Planning">Ferrari</option>
+                        <option value="Ferrari">Ferrari</option>
                     </select>
                 </div>
 
