@@ -10,7 +10,7 @@ const AddBrand = () => {
         const photo = form.photo.value
         const user = {brandname, photo}
         console.log( user)
-        fetch('http://localhost:5000/brands',{
+        fetch('https://car-collection-server.vercel.app/brands',{
             method:"POST",
             headers: {
                 "Content-Type": "application/json",

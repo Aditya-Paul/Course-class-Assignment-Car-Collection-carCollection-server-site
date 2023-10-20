@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/brands')
+                loader: () => fetch('https://car-collection-server.vercel.app/brands')
             },
             {
                 path: "/add_product",
@@ -34,22 +34,22 @@ const router = createBrowserRouter([
             {
                 path: "/my_cart",
                 element: <PrivateRoute><Mycart></Mycart></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/carts')
+                loader: () => fetch('https://car-collection-server.vercel.app/carts')
             },
             {
                 path: "/:brandname",
                 element: <Brandsitem></Brandsitem>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brandname}`)
+                loader: ({ params }) => fetch(`https://car-collection-server.vercel.app/products/${params.brandname}`)
             },
             {
                 path: "/details/:id",
                 element: <PrivateRoute><Detail></Detail></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://car-collection-server.vercel.app/product/${params.id}`)
             },
             {
                 path: "/update/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://car-collection-server.vercel.app/product/${params.id}`)
             },
             {
                 path: "/login",

@@ -9,8 +9,8 @@ const Detail = () => {
 
     const handleadd = () => {
         const cart = { name, photo, price, description }
-
-        fetch('http://localhost:5000/carts', {
+        // console.log
+        fetch('https://car-collection-server.vercel.app/carts', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

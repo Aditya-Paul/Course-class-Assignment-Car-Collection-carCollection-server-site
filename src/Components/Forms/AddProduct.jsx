@@ -17,7 +17,7 @@ const AddProduct = () => {
         const types = form.cartypes.value
         const item = {name, brandname, photo, price, rateing, description, types}
         console.log(item,'get item')
-        fetch('http://localhost:5000/products',{
+        fetch('https://car-collection-server.vercel.app/products',{
             method:"POST",
             headers: {
                 "Content-Type": "application/json",
