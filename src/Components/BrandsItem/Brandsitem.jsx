@@ -34,12 +34,15 @@ const Brandsitem = () => {
                     </div>
                 </div>
             </div>
-            <div><h2 className="text-center text-3xl font-semibold text-black bg-slate-500">Brand Items</h2></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-10 py-10">
-                
-            {
-                items.map(item=><Iteminfo key={item._id} value={item}></Iteminfo>)
-            }
+
+            <div>
+                <h2 className="text-center text-3xl font-semibold text-black bg-white mt-10">Brand Items</h2>
+            </div>
+            <div className="grid grid-cols-1  gap-4 px-10 py-10">
+
+                {
+                    items.map(item => <Iteminfo key={item._id} value={item}></Iteminfo>)
+                }
             </div>
 
         </div>

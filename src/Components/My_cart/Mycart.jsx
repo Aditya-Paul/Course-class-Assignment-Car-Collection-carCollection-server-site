@@ -11,9 +11,9 @@ const Mycart = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="my-20">
+            <div className=" grid gap-7 justify-center items-center mx-20 my-20">
                 {
-                    getdata.map(item=><CartDetails key={item._id} value={item} data={data} setData={setData}></CartDetails>)
+                data.map(item=><CartDetails key={item._id} value={item} info={data} setInfo={setData}></CartDetails>)
                 }
             </div>
             <Footer></Footer>

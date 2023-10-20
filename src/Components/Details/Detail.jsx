@@ -17,14 +17,15 @@ const Detail = () => {
             },
             body: JSON.stringify(cart),
         })
-            .then(res => {res.user,
+            .then(res => {
+                res.user,
                 Swal.fire({
                     title: 'good job',
                     text: 'enter to database',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                 }),
-                navigate(location.state? location.state:'/')
+                navigate(location.state ? location.state : '/')
             })
             .then(data => {
                 console.log(data)
@@ -32,12 +33,12 @@ const Detail = () => {
     }
 
     return (
-        <div className="h-screen flex justify-center items-center  mx-20 ">
-            <div className="border-2 grid grid-cols-1 md:grid-cols-2 bg-slate-300 ">
+        <div className="h-screen flex justify-center items-center mx-4 md:mx-10 lg:mx-20">
+            <div className="border-2 grid grid-cols-1 md:grid-cols-2 bg-slate-300">
                 <div className="w-full relative">
-                    <img src={photo} alt="" className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                    <img src={photo} alt="" className="absolute mt-[15.5rem] md:mt-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 </div>
-                <div className="flex flex-col justify-center items-center p-4">
+                <div className="flex flex-col justify-center items-center text-center p-4 mt-[20rem]  md:mt-0">
                     <h2 className="text-2xl font-bold">{name}</h2>
                     <p className="text-lg">{price}</p>
                     <p className="text-gray-700 mt-4">{description}</p>
@@ -45,6 +46,7 @@ const Detail = () => {
                 </div>
             </div>
         </div>
+
     );
 };
 
