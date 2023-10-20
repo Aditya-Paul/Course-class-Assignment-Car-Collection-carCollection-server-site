@@ -21,7 +21,7 @@ const Detail = () => {
                 res.user,
                 Swal.fire({
                     title: 'good job',
-                    text: 'enter to database',
+                    text: 'Enter to My Cart',
                     icon: 'success',
                     confirmButtonText: 'Cool'
                 }),

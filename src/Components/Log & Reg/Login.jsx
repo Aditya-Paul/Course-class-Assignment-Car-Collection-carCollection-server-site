@@ -57,7 +57,7 @@ const Login = () => {
                     <p className="text-2xl mt-5">Login using Social Network</p>
 
                     <div className=" mt-5 mb-5" >
-                        <button onClick={handlegooglelogin}><AiFillGooglePlusCircle className="text-4xl"></AiFillGooglePlusCircle></button>
+                        <button className="btn" onClick={handlegooglelogin}><AiFillGooglePlusCircle className="text-4xl"></AiFillGooglePlusCircle></button>
                     </div>
 
                     <p className="text-2xl mt-5">----or----</p>
