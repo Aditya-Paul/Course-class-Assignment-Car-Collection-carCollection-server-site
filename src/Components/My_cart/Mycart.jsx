@@ -8,6 +8,7 @@ import { useState } from "react";
 const Mycart = () => {
     const getdata = useLoaderData()
     const [data,setData] = useState(getdata)
+    console.log(data)
     return (
         <div>
             <Navbar></Navbar>

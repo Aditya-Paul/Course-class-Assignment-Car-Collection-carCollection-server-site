@@ -10,6 +10,7 @@ const Register = () => {
     const handleRegister = e=>{
         e.preventDefault();
         const form = e.target
+        const name = form.name.value
         const email = form.email.value
         const password = form.password.value
         const image = form.photo.value
@@ -28,6 +29,7 @@ const Register = () => {
         }
         signup(email,password)
         .then(res=>{
+            console.log('reg', res.user)
             update(name,image)
             .then(res=>{
                 Swal.fire("Good job!", "Successfully created user profile", "success");
@@ -44,6 +46,12 @@ const Register = () => {
             <Navbar></Navbar>
             <div className="" >
                 <form className="card-body" onSubmit={handleRegister}>
+                    <div className="form-control  items-center justify-center">
+                        <label className="label">
+                            <span className="label-text">Name</span>
+                        </label>
+                        <input type="name" name='name' placeholder="Name" className="input input-bordered rounded-xl" required />
+                    </div>
                     <div className="form-control  items-center justify-center">
                         <label className="label">
                             <span className="label-text">Email</span>

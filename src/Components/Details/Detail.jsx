@@ -1,15 +1,19 @@
+import { useContext } from "react";
 import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/Authprovider";
 
 const Detail = () => {
     const getdata = useLoaderData()
     const { name, photo, price, description } = getdata
+    const {user} = useContext(AuthContext)
+    const email = user.email
     const location = useLocation()
     const navigate = useNavigate()
 
     const handleadd = () => {
-        const cart = { name, photo, price, description }
-        // console.log
+        const cart = { name, photo, price, description,email }
+         console.log(cart)
         fetch('https://car-collection-server.vercel.app/carts', {
             method: "POST",
             headers: {

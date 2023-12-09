@@ -25,7 +25,7 @@ const Login = () => {
             //  navigate(location?.state? location.state: '/')
             // navigate(location.state? location.state : '/')
             navigate(location.state? location.state:'/')
-            // console.log(res.user)
+             console.log(res.user)
         })
         .catch(error =>{
             Swal.fire("Oops!", "Please Check email and password again", "error");
@@ -39,7 +39,7 @@ const Login = () => {
             .then(res => {
                 console.log(res.user)
                 Swal.fire("Good job!", "Successfully logged in", "success");
-                location
+                
 
             })
             .catch(error => {

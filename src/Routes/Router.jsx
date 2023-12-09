@@ -32,9 +32,9 @@ const router = createBrowserRouter([
                 element: <AddBrand></AddBrand>,
             },
             {
-                path: "/my_cart",
+                path: "/my_cart/:email",
                 element: <PrivateRoute><Mycart></Mycart></PrivateRoute>,
-                loader: () => fetch('https://car-collection-server.vercel.app/carts')
+                loader: ({params}) => fetch(`https://car-collection-server.vercel.app/carts/${params.email}`)
             },
             {
                 path: "/:brandname",

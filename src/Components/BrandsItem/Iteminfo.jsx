@@ -1,3 +1,5 @@
+
+import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
 
 
@@ -19,7 +21,7 @@ const Iteminfo = ({ value }) => {
                 <p>Company: <span className="text-green-500 font-light">{brandname}</span></p>
                 <p>Price: <span className="text-green-500 font-light">{price}</span></p>
                 <p>Type: <span className="text-green-500 font-light">{types}</span></p>
-                <p>Rate: <span className="text-green-500 font-light">{rateing}</span></p>
+                <div className=" flex gap-2">Rate: <Rating className=" text-center" name="customized-10" defaultValue={rateing} max={10} /></div>
 
                 <div className="md:space-x-3 md:mt-4">
                     <Link to={`/details/${_id}`}><button className="text-green-500 btn shadow-lg shadow-green-300">Details</button></Link>

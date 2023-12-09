@@ -8,6 +8,14 @@ const auth = getAuth(app);
 const googleprovider = new GoogleAuthProvider();
 const Authprovider = ({ children }) => {
     const [user, setUser] = useState(null);
+
+    // toogle theme
+    const [theme, setTheme] = useState("light");
+    const toggleTheme = () => {
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    };
+
+
     // google sign in
     const googlesignIN = () => {
         return signInWithPopup(auth, googleprovider)
@@ -53,6 +61,8 @@ const Authprovider = ({ children }) => {
         update,
         user,
         userlogout,
+        theme,
+        toggleTheme
     }
     return (
         <AuthContext.Provider value={authinfo}>
